@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>go_through_list</title>
+</head>
+<body>
+    <ul>
+        {% for hero in heroes %}
+        <li>{{ hero }}</li>
+            loop.index returns {{ loop.index }}<br>
+            loop.index0 returns {{ loop.index0 }}<br>
+            loop.revindex returns {{ loop.revindex }}<br>
+            loop.revindex0 returns {{ loop.revindex0 }}<br>
+            loop.first returns {{ loop.first }}<br>
+            loop.last returns {{ loop.last }}<br>
+            loop.length returns {{ loop.length }}<br>
+            loop.cycle('1a1a23', '13a2a3a3', '21a32', '321') returns {{ loop.cycle('1a1a23', '13a2a3a3', '21a32', '321') }}<br>
+        {% endfor %}
+    </ul>
+    I play {{ heroes.0 }}
+    <br>
+    I don't play {{ heroes[1] }}
+</body>
+</html>

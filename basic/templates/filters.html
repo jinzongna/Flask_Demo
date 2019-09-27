@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Filters</title>
+</head>
+
+<p>{{ '{{ \'<em>Hello world!</em>\' }}' }}
+<br>{{ '<em>Hello world!</em>'|safe }} <mark>safe</mark>
+<br>{{ '<em>Hello world!</em>'|striptags }} <mark>striptags</mark>
+</p>
+
+<p>{{ '{{ \'hi, Mike\' }}' }}
+<br>{{ 'hi, Mike'|capitalize }} <mark>capitalize</mark>
+<br>{{ 'hi, Mike'|lower }} <mark>lower</mark>
+<br>{{ 'hi, Mike'|upper }} <mark>upper</mark>
+<br>{{ 'hi, Mike'|title }} <mark>title</mark>
+<br>{{ 'hi, Mike'|reverse }} <mark>reverse</mark>
+</p>
+
+<p>{{ '{{ \'%s is %d\' | format(\'Mike\', 17) }}' }}
+<br>{{ '%s is %d'|format('Mike', 17) }} <mark>format</mark>
+</p>
+
+<p>{{ '{{ \'hi, Mike good for you\' | truncate(12) }}' }}
+<br>{{ 'hi, Mike good for you' | truncate(12) }} <mark>truncate</mark>
+</p>
+
+<p>{{ '{{ [3,2,6,4,1,5] }}' }}
+<br>{{ [3,2,6,4,1,5]|first }} <mark>first</mark>
+<br>{{ [3,2,6,4,1,5]|last }} <mark>last</mark>
+<br>{{ [3,2,6,4,1,5]|length }} <mark>length</mark>
+<br>{{ [3,2,6,4,1,5]|sum }} <mark>sum</mark>
+<br>{{ [3,2,6,4,1,5]|sort }} <mark>sort</mark>
+<br>{{ [3,2,6,4,1,5]|my_reverse }} <mark>my_reverse</mark>
+<br>{{ [3,2,6,4,1,5]|sort|my_reverse }} <mark>sort | my_reverse</mark>
+</p>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>go_through_dict</title>
+</head>
+<body>
+    <ul>
+        {% for k,y in info.items() %}
+        <li>{{ k }} 是 {{ y }}</li>
+        <li>{{ k }} 乃 {{ info[k] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
