@@ -1,0 +1,6 @@
+include Flask_Demo/blog_demo/schema.sql
+graft Flask_Demo/blog_demo/static
+graft Flask_Demo/blog_demo/templates
+graft Flask_Demo/basic/static
+graft Flask_Demo/basic/templates
+global-exclude *.pyc *.md *.sqlite
