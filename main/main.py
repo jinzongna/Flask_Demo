@@ -1,6 +1,7 @@
 import os
 
 from flask import Flask, render_template
+from flask_bootstrap import Bootstrap
 
 
 def create_app(test_config=None):
@@ -27,7 +28,7 @@ def create_app(test_config=None):
     # a simple page that says hello
     @app.route('/')
     def main():
-        return render_template("main.html")
+        return render_template("main.html", title_name='Flask Demo Homepage')
 
     from blog_demo import db
     db.init_app(app)
@@ -42,4 +43,5 @@ def create_app(test_config=None):
     from basic import basic_app
     app.register_blueprint(basic_app.bp)
 
+    Bootstrap(app)
     return app

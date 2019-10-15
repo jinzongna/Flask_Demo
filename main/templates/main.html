@@ -1,13 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home Page</title>
-</head>
-<body>
-    <ul>
-        <li><a href="basic">basic</a></li>
-        <li><a href="blog">blog_demo</a></li>
+{% extends 'bootstrap/base.html' %}  #声明继承
+{% block title %}{{ title_name }}{% endblock %}
+{% block content %}
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link active" href="blog">Blog Demo</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Basic</a>
+            <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px);">
+                <a class="dropdown-item" href="basic">basic</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="basic/city/Beijing">Hello Beijing</a>
+                <a class="dropdown-item" href="basic/city/Shenzhen">Hello Shenzhen</a>
+                <a class="dropdown-item" href="basic/form">from</a>
+                <a class="dropdown-item" href="basic/filters">filters</a>
+                <a class="dropdown-item" href="basic/css_js">css and js</a>
+                <a class="dropdown-item" href="basic/go_through_list">go through list</a>
+                <a class="dropdown-item" href="basic/go_through_dict">go through dict</a>
+                <a class="dropdown-item" href="basic/condition/李白">condition 李白</a>
+                <a class="dropdown-item" href="basic/condition/露娜">condition 露娜</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
     </ul>
-</body>
-</html>
+{% endblock content %}
+{% block styles %}
+    {{ super() }}
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+            integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+            crossorigin="anonymous"></script>
+{% endblock %}
