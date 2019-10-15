@@ -7,7 +7,7 @@ bp = Blueprint('basic', __name__, template_folder='templates', static_folder='st
 # hello world代码
 @bp.route('/')
 def hello_world():
-    return 'Hello World in Module '+__name__
+    return render_template("basic.html")
 
 # 通过URL传递参数
 @bp.route('/user/<name>')
